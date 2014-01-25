@@ -1,0 +1,26 @@
+{
+  "name": "csscomb-brunch",
+  "version": "1.7.0",
+  "description": "Gives Brunch workflows the ability to sort CSS properties.",
+  "main": "lib/index",
+  "scripts": {
+    "prepublish": "rm -f lib/* && coffee -cbo lib/ src/"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/garetht/csscomb-brunch.git"
+  },
+  "keywords": [
+    "brunch",
+    "csscomb"
+  ],
+  "author": "Gareth Tan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garetht/csscomb-brunch/issues"
+  },
+  "homepage": "https://github.com/garetht/csscomb-brunch",
+  "dependencies": {
+    "csscomb": "~2.0.4"
+  }
+}
