@@ -1,6 +1,6 @@
 {
   "name": "csscomb-brunch",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "description": "Gives Brunch workflows the ability to sort CSS properties.",
   "main": "lib/index",
   "scripts": {
@@ -14,6 +14,8 @@
     "brunch",
     "csscomb"
   ],
+    "readme": "# csscomb-brunch\r\nAdds support for [CSScomb](http://csscomb.com/) to [brunch](http://brunch.io). Checkout how to easily write your own configuration to make your style sheets beautiful and consistent at [CSScomb's configuration instructions](https://github.com/csscomb/csscomb.js/blob/dev/doc/configuration.md).\r\n\r\n## Usage\r\nInstall the plugin via npm with `npm install --save-dev csscomb-brunch`.\r\n\r\nOr, manually add it to your `package.json` file:\r\n\r\n* For example:\r\n\r\n    ```javascript\r\n    'devDependencies': {\r\n      'csscomb-brunch': '^2.0.0'\r\n    }\r\n    ```\r\n\r\n* Or use the GitHub URL:\r\n    ```javascript\r\n    'devDependencies': {\r\n      'csscomb-brunch': 'garetht/csscomb-brunch'\r\n    }\r\n    ```\r\n\r\n## Example Configuration\r\nThere are a number of ways to configure this plugin. By default, it uses CSScomb's predefined config called [csscomb](https://github.com/csscomb/csscomb.js/blob/dev/config/csscomb.json).\r\n\r\n### Predefined Configuration\r\nTo use one of CSScomb's predefined configs edit your `brunch-config.js` file to set the `encoding` option. When not set, it defaults to `csscomb`:\r\n```javascript\r\nplugins: {\r\n    csscomb: {\r\n        encoding: 'zen' // options: 'zen', 'yandex', 'csscomb'\r\n    }\r\n},\r\n```\r\n\r\n### Custom Configuration\r\nTo build your own CSScomb config use CSScomb's [visual builder](https://github.com/csscomb/csscomb.js) or easily [write your own](https://github.com/csscomb/csscomb.js/blob/dev/doc/configuration.md#create-custom-config). Specify your own config file in `brunch-config.js` by setting the path to your file in `encoding: require('path/to/file')` , for example: \r\n```javascript\r\nplugins: {\r\n    csscomb: {\r\n        encoding: require('./.csscomb.json') // this will use a file named '.csscomb.json' in your project root\r\n   }\r\n},\r\n```\r\n\r\n### Configuraiton Log\r\nTo see logged output of the CSScomb config, set this parameter in your `brunch-config.js` file. When not set, it defaults to false:\r\n```javascript\r\nplugins: {\r\n    csscomb: {\r\n        logConfig: true // defaults to false\r\n   }\r\n},\r\n```\r\n\r\nHere's an example of what the logged output looks like in terminal when `logConfig` is set to `true`. It displays the contents of the configuration file to aid debugging:\r\n\r\n<img src='https://raw.githubusercontent.com/garetht/csscomb-brunch/master/log.png' width='320' alt='Example of logged output'>\r\n\r\n## License\r\nThis software is released under the terms of the [MIT license](https://github.com/garetht/csscomb-brunch/blob/master/LICENSE).",
+  "readmeFilename": "README.md",
   "author": "Gareth Tan",
   "license": "MIT",
   "bugs": {
@@ -21,6 +23,8 @@
   },
   "homepage": "https://github.com/garetht/csscomb-brunch",
   "dependencies": {
-    "csscomb": "~2.0.4"
+    "csscomb": "^4.0.0"
   }
 }
+
+
